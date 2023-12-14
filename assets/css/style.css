@@ -1,3 +1,20 @@
+ /* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Gafata&display=swap');
+
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
 body {
     background-color: black;
+    font-family: 'Gafata', sans-serif;
+}
+
+h1 {
+    color: white;
 }
