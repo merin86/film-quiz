@@ -11,10 +11,18 @@
 
 /* General styles */
 body {
-    background-color: black;
     font-family: 'Gafata', sans-serif;
+    color: whitesmoke;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: url(../images/godfather.jpg) no-repeat center center;
+    background-color: black;
 }
 
 h1 {
-    color: white;
+    
 }
