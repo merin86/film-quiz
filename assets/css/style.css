@@ -12,17 +12,66 @@
 /* General styles */
 body {
     font-family: 'Gafata', sans-serif;
-    color: whitesmoke;
+    color: black;
 }
+
 
 main {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    background: url(../images/godfather.jpg) no-repeat center center;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/godfather.jpg) no-repeat center center/cover;
     background-color: black;
+    flex-direction: column;
 }
 
+/* Heading style */
 h1 {
-    
+    display: fixed;
+    justify-content:center;
+    align-items: center;
+    color: black;
+    font-size: 48px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 5px;
+}
+
+/* Style for question area */
+.container {
+    width: 30rem;
+    height: 20rem;
+    background-color: bisque;
+    border-radius: 10px;
+    border: 10px solid;
+    border-color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Style for answer div */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* <--Code from "https://www.w3schools.com/cssref/pr_grid-template-columns.php" */
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Style for buttons */
+.btn {
+    font-size: 24px;
+    border: 2px solid;
+    background-color: bisque;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
