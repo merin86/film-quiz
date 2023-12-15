@@ -42,8 +42,8 @@ h1 {
 
 /* Style for question area */
 .container {
-    width: 30rem;
-    height: 20rem;
+    width: 75%;
+    height: 50%;
     background-color: bisque;
     border-radius: 10px;
     border: 10px solid;
@@ -74,4 +74,8 @@ h1 {
     background-color: bisque;
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+.btn:hover {
+    border-color: whitesmoke;
 }
