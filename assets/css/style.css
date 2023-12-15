@@ -27,23 +27,11 @@ main {
     flex-direction: column;
 }
 
-/* Heading style */
-h1 {
-    display: fixed;
-    justify-content:center;
-    align-items: center;
-    color: black;
-    font-size: 48px;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    margin: 20px 0;
-    padding: 5px;
-}
 
 /* Style for question area */
 .container {
-    width: 75%;
-    height: 50%;
+    width: 90%;
+    height: 15rem;
     background-color: bisque;
     border-radius: 10px;
     border: 10px solid;
@@ -53,6 +41,20 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 120px;
+}
+
+#play-btn {
+
+}
+
+/* Style for questions div */
+#questions {
+    font-size: 16px;
+    border: 2px solid;
+    background-color: bisque;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 
@@ -67,9 +69,9 @@ h1 {
     margin: 20px 0;
 }
 
-/* Style for buttons */
+/* Style for answer buttons */
 .btn {
-    font-size: 24px;
+    font-size: 16px;
     border: 2px solid;
     background-color: bisque;
     padding: 5px 10px;
