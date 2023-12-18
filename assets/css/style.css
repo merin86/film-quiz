@@ -31,7 +31,7 @@ main {
 /* Style for question area */
 .container {
     width: 90%;
-    height: 15rem;
+    height: 60vh;
     background-color: bisque;
     border-radius: 10px;
     border: 10px solid;
