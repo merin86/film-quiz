@@ -20,7 +20,7 @@
 <body>
     <main>
         <div class="container">
-            <div id="questions-container" class="hidden">
+            <div id="questions-container">
                 <div id="questions">Questions</div>
                 <div id="answer-buttons" class="buttons">
                     <button class="btn">Answer 1</button>
@@ -29,10 +29,16 @@
                     <button class="btn">Answer 4</button>
                 </div>
             </div>
-            <div class="command"></div>
+            <div class="conunter-container">
+                <a href="index.html" id="stop-btn"><i class="fa-solid fa-stop"></i></a>
+                <p>Question: <span id="current-question">1/6</span></p>
+                <p>Score: <span id="current-score">0/6</span></p>
+            </div>
         </div>
     </main>
     <script src="assets/js/script.js"></script>
+    <!-- Font Awesome kit -->
+    <script src="https://kit.fontawesome.com/8cb9acf2e2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

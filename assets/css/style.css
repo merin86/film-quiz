@@ -45,7 +45,8 @@ main {
 }
 
 #play-btn {
-
+    font-size: 3rem;
+    color: black;
 }
 
 /* Style for questions div */
@@ -80,4 +81,22 @@ main {
 
 .btn:hover {
     border-color: whitesmoke;
+}
+
+.conunter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.conunter-container p {
+    border: 2px solid black;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+#stop-btn {
+    font-size: 2rem;
+    color: black;
 }
