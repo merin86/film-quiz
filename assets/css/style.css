@@ -100,3 +100,22 @@ main {
     font-size: 2rem;
     color: black;
 }
+
+
+/* Media query: tablets and larger (768px and up */
+@media screen and (min-width: 768px) {
+   
+    .container {
+        width: 70%;
+        height: 60vh;
+    }
+}
+
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .container {
+        width: 40%;
+        height: 60vh;
+    }
+}
