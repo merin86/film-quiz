@@ -111,6 +111,14 @@ main {
     margin-left: 1rem;
 }
 
+/* Media query: large or landscape phones (576px and up */
+@media screen and (min-width: 576px) {
+    .container {
+        width: 70%;
+        height: 100vh;
+    }
+}
+
 
 /* Media query: tablets and larger (768px and up */
 @media screen and (min-width: 768px) {
@@ -135,6 +143,6 @@ main {
 @media screen and (min-width: 992px) {
     .container {
         width: 50%;
-        height: 60vh;
+        height: 50vh;
     }
 }
