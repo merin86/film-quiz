@@ -1,3 +1,32 @@
+const playButton = document.getElementById("play-btn")
+const questionsContainerElement = document.getElementById("questions-container")
+const questionsElement = document.getElementById("questions");
+const answerButtons = document.getElementById("answer-buttons");
+
+let shuffledQuestions, currentQuestionIndex
+
+playButton.addEventListener("click", runGame)
+
+function runGame() {
+    console.log("Started")
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    setNextQuestion()
+}
+
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question) {
+    questionsElement.innerText = question.question
+}
+
+function selectAnswer() {
+
+}
+
+// Questions for quiz:
 const questions = [
     {
         question: "Which film did Stanley Kubrick not direct?",
@@ -53,4 +82,4 @@ const questions = [
             {text: "7", correct: false},
         ]
     }
-]
+];
