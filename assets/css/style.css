@@ -35,7 +35,7 @@ main {
     background-color: bisque;
     border-radius: 10px;
     border: 10px solid;
-    border-color: whitesmoke;
+    border-color: black;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -80,6 +80,7 @@ main {
     border-color: whitesmoke;
 }
 
+/* Style for counter container */
 .conunter-container {
     display: flex;
     justify-content: space-around;
@@ -111,8 +112,10 @@ main {
     margin-left: 1rem;
 }
 
+
 /* Media query: large or landscape phones (576px and up */
 @media screen and (min-width: 576px) {
+
     .container {
         width: 70%;
         height: 100vh;
@@ -142,7 +145,7 @@ main {
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     .container {
-        width: 50%;
+        width: 40%;
         height: 50vh;
     }
 }
