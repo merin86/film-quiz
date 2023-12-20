@@ -6,147 +6,64 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Gafata', sans-serif;
     box-sizing: border-box;
 }
 
 /* General styles */
 body {
-    font-family: 'Gafata', sans-serif;
-    color: black;
-    font-size: 16px;
-}
-
-
-main {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: url(../images/cartoon-style.jpg) repeat center;
     background-color: black;
-    flex-direction: column;
+    color: black;
+    font-size: 16px;
 }
 
 
-/* Style for question area */
+/* Style for game area */
 .container {
-    width: 90%;
-    height: 60vh;
     background-color: bisque;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
     border-radius: 10px;
+    padding: 30px;
     border: 10px solid;
     border-color: black;
+}
+
+.container h1 {
+    font-size: 42px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.container p {
+    font-size: 18px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 }
 
-#play-btn {
-    font-size: 3rem;
-    color: black;
+.quiz {
+    padding: 20px 0;
 }
 
-/* Style for questions div */
-#questions {
-    font-size: 20px;
-    border: 2px solid;
-    background-color: bisque;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-
-/* Style for answer div */
-.buttons {
-    display: grid;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-/* Style for answer buttons */
-.btn {
-    font-size: 16px;
-    border: 2px solid;
-    background-color: bisque;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-.btn:hover {
-    border-color: whitesmoke;
-}
-
-/* Style for counter container */
-.conunter-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.quiz h2 {
 
 }
-
-.conunter-container p {
-    border: 2px solid black;
-    margin: 0 5px;
-    padding: 5px;
-    font-size: 0.7rem;
-}
-
-.conunter-container a {
-    border: 2px solid black;
-    margin: 0 5px;
-    padding: 5px;
-    text-decoration: none;
-}
-
-#stop-btn {
-    font-size: 0.7rem;
-    color: black;
-    
-}
-
-.fa-stop {
-    margin-left: 1rem;
-}
-
 
 /* Media query: large or landscape phones (576px and up */
 @media screen and (min-width: 576px) {
 
-    .container {
-        width: 70%;
-        height: 100vh;
-    }
 }
 
 
 /* Media query: tablets and larger (768px and up */
 @media screen and (min-width: 768px) {
 
-    main {
-        background: url(../images/cartoon-style.jpg) repeat;
-    }
-   
-    .container {
-        width: 70%;
-        height: 60vh;
-    }
-
-    .buttons {
-        grid-template-columns: repeat(2, auto); /* <--Code from "https://www.w3schools.com/cssref/pr_grid-template-columns.php" */
-        gap: 20px;
-    }
 }
 
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    .container {
-        width: 40%;
-        height: 50vh;
-    }
+    
 }

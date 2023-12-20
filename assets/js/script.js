@@ -1,4 +1,4 @@
-const questionsElement = document.getElementById("questions");
+const question = document.getElementById("question");
 const btn = Array.from(document.getElementsByClassName("btn"));
 
 let currentQuestion = {};
@@ -66,9 +66,9 @@ let questions = [
     }
 ];
 
-const maxQuestions = 6;
+const MAX_QUESTIONS = 6;
 
-runGame = () => {
+startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -77,8 +77,11 @@ runGame = () => {
 
 function getNewQuestion() {
     questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
 };
 
-function runGame() {
+function startGame() {
 
 };
