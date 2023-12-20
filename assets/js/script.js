@@ -1,33 +1,15 @@
-const playButton = document.getElementById("play-btn")
-const questionsContainerElement = document.getElementById("questions-container")
 const questionsElement = document.getElementById("questions");
-const answerButtons = document.getElementById("answer-buttons");
+const btn = Array.from(document.getElementsByClassName("btn"));
 
-let shuffledQuestions, currentQuestionIndex
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
 
-playButton.addEventListener("click", runGame)
-
-function runGame() {
-    console.log("Started")
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    setNextQuestion()
-}
-
-function setNextQuestion() {
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
-function showQuestion(question) {
-    questionsElement.innerText = question.question
-}
-
-function selectAnswer() {
-
-}
 
 // Questions for quiz:
-const questions = [
+let questions = [
     {
         question: "Which film did Stanley Kubrick not direct?",
         answers: [
@@ -83,3 +65,20 @@ const questions = [
         ]
     }
 ];
+
+const maxQuestions = 6;
+
+runGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion();
+};
+
+function getNewQuestion() {
+    questionCounter++;
+};
+
+function runGame() {
+
+};
