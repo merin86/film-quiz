@@ -1,13 +1,3 @@
-const question = document.getElementById("question");
-const btn = Array.from(document.getElementsByClassName("btn"));
-
-let currentQuestion = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-
-
 // Questions for quiz:
 let questions = [
     {
@@ -65,23 +55,3 @@ let questions = [
         ]
     }
 ];
-
-const MAX_QUESTIONS = 6;
-
-startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
-};
-
-function getNewQuestion() {
-    questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
-};
-
-function startGame() {
-
-};
