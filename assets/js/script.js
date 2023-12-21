@@ -56,7 +56,7 @@ let questions = [
     }
 ];
 
-const questionElement = document.getElementById("question");
+const questionElement = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
