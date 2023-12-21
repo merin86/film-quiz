@@ -56,25 +56,27 @@ let questions = [
     }
 ];
 
-const questionElement = document.getElementById("question-container");
+const questionContainer = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz() {
+// Starts the game
+function runQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
-    showQuestion();
+    setQuestion();
 }
 
-function showQuestion() {
-    resetState();
+// Displays questions in question container and answers in buttons
+function setQuestion() {
+    restoreState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    questionContainer.innerHTML = questionNo + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -84,25 +86,27 @@ function showQuestion() {
         if(answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", selectAnswer);
+        button.addEventListener("click", chooseAnswer);
     })
 }
 
-function resetState() {
+// Removes placeholder-buttons
+function restoreState() {
     nextButton.style.display = "none";
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-function selectAnswer(e) {
-    const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
+// checks if answer is correct or incorrect and apply red or green background
+function chooseAnswer(e) {
+    const selectedButton = e.target;
+    const isCorrect = selectedButton.dataset.correct === "true";
     if(isCorrect) {
-        selectedBtn.classList.add("correct");
+        selectedButton.classList.add("correct");
         score++;
     } else {
-        selectedBtn.classList.add("incorrect");
+        selectedButton.classList.add("incorrect");
     }
     Array.from(answerButtons.children).forEach(button => {
         if(button.dataset.correct === "true") {
@@ -113,28 +117,30 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
-function showScore() {
-    resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+// this function shows users score in the ned of the game
+function displayScore() {
+    restoreState();
+    questionContainer.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
 
-function handleNextButton() {
+// function for next-button
+function setNextButton() {
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length) {
-        showQuestion();
+        setQuestion();
     } else {
-        showScore();
+        displayScore();
     }
 }
 
 nextButton.addEventListener("click", ()=> {
     if(currentQuestionIndex < questions.length) {
-        handleNextButton();
+        setNextButton();
     } else {
-        startQuiz();
+        runQuiz();
     }
 });
 
-startQuiz();
+runQuiz();

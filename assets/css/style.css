@@ -74,12 +74,11 @@ body {
     color: bisque;
 }
 
-/* This effect will disable the buttons once one answer is clicked */
 .btn:disabled {
     cursor: no-drop;
 }
 
-/* The next button, it will appear once one answer is clicked */
+/* The next button is hidden, it will appear once one answer is clicked */
 #next-btn {
     background: black;
     color: bisque;
