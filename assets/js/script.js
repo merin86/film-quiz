@@ -134,7 +134,53 @@ let questions = [
             {text: "Being John Malkovich", correct: true},
             {text: "Enter the Void", correct: false},
         ]
+    },
+    {
+        question: "What is the name of the first Star Wars movie?",
+        answers: [
+            {text: "The Empire Strikes Back", correct: false},
+            {text: "A New Hope", correct: true},
+            {text: "Return Of The Jedi", correct: false},
+            {text: "The Phantom Menace", correct: false},
+        ]
+    },
+    {
+        question: "In which movie does Tom Hanks play a homosexual man with AIDS?",
+        answers: [
+            {text: "Forest Gump", correct: false},
+            {text: "Cast Away", correct: false},
+            {text: "The Ladykillers", correct: false},
+            {text: "Philadelphia", correct: true},
+        ]
+    },
+    {
+        question: "Which war is portrayed in the film 'Dances with Wolves'?",
+        answers: [
+            {text: "The American Civil War", correct: true},
+            {text: "World War I", correct: false},
+            {text: "The American Revolutionary War", correct: false},
+            {text: "World War II", correct: false},
+        ]
+    },
+    {
+        question: "Who directed the movie 'The Godfather'?",
+        answers: [
+            {text: "Stanley Kubrick", correct: false},
+            {text: "Francis Ford Coppola", correct: true},
+            {text: "Roman Polanski", correct: false},
+            {text: "Michael Cimino", correct: false},
+        ]
+    },
+    {
+        question: "From which country is the emperor in the movie 'The Last Emperor'?",
+        answers: [
+            {text: "Japan", correct: false},
+            {text: "Russia", correct: false},
+            {text: "China", correct: true},
+            {text: "Germany", correct: false},
+        ]
     }
+
 ];
 
 const playButton = document.getElementById("play-btn");
@@ -189,12 +235,12 @@ function setQuestion() {
     })
 }
 
-// Increments question counter
+// Increments question counter and resets counter when user wants to play again
 function counterTool() {
     if (currentQuestionCounter < max_questions) {
         currentQuestionCounter++;
         currentQuestionElement.innerText = currentQuestionCounter + "/" + max_questions;
-    } else (currentQuestionCounter == max_questions)
+    } else (currentQuestionCounter === max_questions)
         currentQuestionElement.innerText = currentQuestionIndex + 1 + "/" + max_questions;
 }
 
