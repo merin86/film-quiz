@@ -53,6 +53,87 @@ let questions = [
             {text: "6", correct: false},
             {text: "7", correct: false},
         ]
+    },
+    {
+        question: "What year did the movie 'The Matrix' come out?",
+        answers: [
+            {text: "1990", correct: false},
+            {text: "1999", correct: true},
+            {text: "2000", correct: false},
+            {text: "2009", correct: false},
+        ]
+    },
+    {
+        question: "Who directed the movie 'Lost in Translation'?",
+        answers: [
+            {text: "Sofia Coppola", correct: true},
+            {text: "James Cameron", correct: false},
+            {text: "Francis Ford Coppola", correct: false},
+            {text: "Alejandro G. Iñárritu", correct: false},
+        ]
+    },
+    {
+        question: "What was the name of the character played by Marlon Brandon in the movie 'Apocalypse Now'?",
+        answers: [
+            {text: "Capt. Benjamin L. Willard", correct: false},
+            {text: "Colonel Lucas", correct: false},
+            {text: "Lt. Col. Bill Kilgore", correct: false},
+            {text: "Col. Walter E. Kurtz", correct: true},
+        ]
+    },
+    {
+        question: "Which of the following Tarantino films came out first?",
+        answers: [
+            {text: "Pulp Fiction", correct: false},
+            {text: "Jackie Brown", correct: false},
+            {text: "Reservoir Dogs", correct: true},
+            {text: "Kill Bill", correct: false},
+        ]
+    },
+    {
+        question: "Who plays the role of Malcolm X in the movie with the same name?",
+        answers: [
+            {text: "Denzel Washington", correct: true},
+            {text: "Will Smith", correct: false},
+            {text: "Glenn Plummer", correct: false},
+            {text: "Samuel L. Jackson", correct: false},
+        ]
+    },
+    {
+        question: "One of the Cone brothers' films won four Oscar statuettes. What movie?",
+        answers: [
+            {text: "Fargo", correct: false},
+            {text: "No Country for Old Men", correct: true},
+            {text: "O Brother, Where Art Thou?", correct: false},
+            {text: "The Big Lebowski", correct: false},
+        ]
+    },
+    {
+        question: "One of these movies is not set in World War II. Which one?",
+        answers: [
+            {text: "The Pianist", correct: false},
+            {text: "Schindler's List", correct: false},
+            {text: "Enemy at the Gates", correct: false},
+            {text: "Paths of Glory", correct: true},
+        ]
+    },
+    {
+        question: "Which of the following films is not a musical?",
+        answers: [
+            {text: "The Rose", correct: true},
+            {text: "Fiddler on the Roof", correct: false},
+            {text: "My Fair Lady", correct: false},
+            {text: "Cabaret", correct: false},
+        ]
+    },
+    {
+        question: "A puppeteer discovers a portal that leads literally into the head of movie star John Malkovich. What's the name of the movie?",
+        answers: [
+            {text: "I am John Malkovich", correct: false},
+            {text: "John Malkovich is me", correct: false},
+            {text: "Being John Malkovich", correct: true},
+            {text: "Enter the Void", correct: false},
+        ]
     }
 ];
 
@@ -113,7 +194,8 @@ function counterTool() {
     if (currentQuestionCounter < max_questions) {
         currentQuestionCounter++;
         currentQuestionElement.innerText = currentQuestionCounter + "/" + max_questions;
-    }
+    } else (currentQuestionCounter == max_questions)
+        currentQuestionElement.innerText = currentQuestionIndex + 1 + "/" + max_questions;
 }
 
 // Removes placeholder-buttons
