@@ -56,9 +56,11 @@ let questions = [
     }
 ];
 
+const playButton = document.getElementById("play-btn");
 const questionContainer = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const paragraph = document.getElementById("paragraph")
 const max_questions = 5;
 
 let currentQuestionIndex = 0;
@@ -96,6 +98,7 @@ function setQuestion() {
 // Removes placeholder-buttons
 function restoreState() {
     nextButton.style.display = "none";
+    paragraph.style.display = "block";
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -124,6 +127,7 @@ function chooseAnswer(e) {
 function displayScore() {
     restoreState();
     questionContainer.innerHTML = `You scored ${score} out of ${max_questions}!`;
+    paragraph.style.display = "none";
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }

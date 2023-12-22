@@ -20,21 +20,27 @@
 <body>
 
     <!-- Game Area -->
-        <div class="container">
-                <h1>Film Quiz</h1>
-                <p>Test your film knowledge by playing this quiz game!
-                </p>
-                <div class="quiz-area">
-                    <h2 id="question-container">Here the questions will appear!</h2>
-                    <div id="answer-buttons">
-                        <button class="btn">Answer 1</button>
-                        <button class="btn">Answer 2</button>
-                        <button class="btn">Answer 3</button>
-                        <button class="btn">Answer 4</button>
-                    </div>
-                    <button id="next-btn">Next</button>
-                </div>
+    <div class="container">
+        <h1>Film Quiz</h1>
+        <p id="paragraph">Test your film knowledge by playing this quiz game! Press the play button here below to start the quiz:
+        </p>
+        <div id="play">
+            <button id="play-btn"><i class="fa-solid fa-play"></i></button>
         </div>
+        <div id="quiz-area" class="hide">
+            <h2 id="question-container">Here the questions will appear!</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Font Awesome kit -->
+    <script src="https://kit.fontawesome.com/8cb9acf2e2.js" crossorigin="anonymous"></script>
 
     <!-- Link to JavaScript -->
     <script src="assets/js/script.js"></script>
