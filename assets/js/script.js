@@ -58,6 +58,7 @@ let questions = [
 
 const playButton = document.getElementById("play-btn");
 const questionCounter = document.getElementById("question-counter");
+const currentQuestionElement = document.getElementById("current-question");
 const returnButton = document.getElementById("return-btn");
 const quizArea = document.getElementById("quiz-area");
 const questionContainer = document.getElementById("question-container");
@@ -69,6 +70,7 @@ const max_questions = 5;
 let currentQuestionIndex = 0;
 let randomQuestions
 let score = 0;
+let currentQuestionCounter = 0;
 
 playButton.addEventListener("click", runQuiz)
 
@@ -89,6 +91,7 @@ function runQuiz() {
 // Displays questions in question container and answers in buttons
 function setQuestion() {
     restoreState();
+    counterTool();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionContainer.innerHTML = questionNo + ". " + currentQuestion.question;
@@ -103,6 +106,14 @@ function setQuestion() {
         }
         button.addEventListener("click", chooseAnswer);
     })
+}
+
+// Increments question counter
+function counterTool() {
+    if (currentQuestionCounter < max_questions) {
+        currentQuestionCounter++;
+        currentQuestionElement.innerText = currentQuestionCounter + "/" + max_questions;
+    }
 }
 
 // Removes placeholder-buttons
