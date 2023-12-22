@@ -59,6 +59,7 @@ let questions = [
 const questionContainer = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const max_questions = 5;
 
 let currentQuestionIndex = 0;
 let randomQuestions
@@ -122,7 +123,7 @@ function chooseAnswer(e) {
 // this function shows users score in the ned of the game
 function displayScore() {
     restoreState();
-    questionContainer.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionContainer.innerHTML = `You scored ${score} out of ${max_questions}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
@@ -130,7 +131,7 @@ function displayScore() {
 // function for next-button
 function setNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length) {
+    if(currentQuestionIndex < max_questions) {
         setQuestion();
     } else {
         displayScore();
@@ -138,7 +139,7 @@ function setNextButton() {
 }
 
 nextButton.addEventListener("click", ()=> {
-    if(currentQuestionIndex < questions.length) {
+    if(currentQuestionIndex < max_questions) {
         setNextButton();
     } else {
         runQuiz();
