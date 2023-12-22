@@ -179,6 +179,15 @@ let questions = [
             {text: "China", correct: true},
             {text: "Germany", correct: false},
         ]
+    },
+    {
+        question: "Which Swedish 'Christmas movie' won four oscars?",
+        answers: [
+            {text: "Tomten är far till alla barn", correct: false},
+            {text: "Ogifta par", correct: false},
+            {text: "Sagan om Karl-Bertil Jonssons julafton", correct: false},
+            {text: "Fanny och Alexander", correct: true},
+        ]
     }
 
 ];
