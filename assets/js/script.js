@@ -61,10 +61,12 @@ const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
+let randomQuestions
 let score = 0;
 
 // Starts the game
 function runQuiz() {
+    randomQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
