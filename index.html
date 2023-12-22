@@ -21,11 +21,16 @@
 
     <!-- Game Area -->
     <div class="container">
-        <h1>Film Quiz</h1>
-        <p id="paragraph">Test your film knowledge by playing this quiz game! Press the play button here below to start the quiz:
+        <div class="static">
+            <h1>Film Quiz</h1>
+            <p id="question-counter" class="hide">Question: <span id="current-question">1/5</span></p>
+            <button id="return-btn" aria-label="Return to starting point" class="hide"><i class="fa-solid fa-rotate-left"></i></button>
+        </div>
+        <p id="paragraph">Test your film knowledge by playing this quiz game! Press the play button here below to start
+            the quiz:
         </p>
         <div id="play">
-            <button id="play-btn"><i class="fa-solid fa-play"></i></button>
+            <button id="play-btn" aria-label="Start the game"><i class="fa-solid fa-play"></i></button>
         </div>
         <div id="quiz-area" class="hide">
             <h2 id="question-container">Here the questions will appear!</h2>
@@ -35,7 +40,7 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
-            <button id="next-btn">Next</button>
+            <button id="next-btn" aria-label="Next question">Next</button>
         </div>
     </div>
 

@@ -57,18 +57,28 @@ let questions = [
 ];
 
 const playButton = document.getElementById("play-btn");
+const questionCounter = document.getElementById("question-counter");
+const returnButton = document.getElementById("return-btn");
+const quizArea = document.getElementById("quiz-area");
 const questionContainer = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
-const paragraph = document.getElementById("paragraph")
+const paragraph = document.getElementById("paragraph");
 const max_questions = 5;
 
 let currentQuestionIndex = 0;
 let randomQuestions
 let score = 0;
 
+playButton.addEventListener("click", runQuiz)
+
 // Starts the game
 function runQuiz() {
+    playButton.classList.add("hide")
+    paragraph.classList.add("hide")
+    quizArea.classList.remove("hide")
+    questionCounter.classList.remove("hide")
+    returnButton.classList.remove("hide")
     randomQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     score = 0;
@@ -98,7 +108,6 @@ function setQuestion() {
 // Removes placeholder-buttons
 function restoreState() {
     nextButton.style.display = "none";
-    paragraph.style.display = "block";
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -123,11 +132,10 @@ function chooseAnswer(e) {
     nextButton.style.display = "block";
 }
 
-// this function shows users score in the ned of the game
+// this function shows users score in the end of the game
 function displayScore() {
     restoreState();
     questionContainer.innerHTML = `You scored ${score} out of ${max_questions}!`;
-    paragraph.style.display = "none";
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
@@ -150,4 +158,9 @@ nextButton.addEventListener("click", ()=> {
     }
 });
 
-runQuiz();
+// This function reloads the page with return button, code taken from sentry.io
+function returnStart() {
+    window.location.reload();
+}
+
+returnButton.addEventListener("click", returnStart)
