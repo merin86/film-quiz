@@ -55,6 +55,11 @@ body {
     cursor: pointer;
 }
 
+#return-btn:hover {
+    color: #444343;
+    box-shadow: 10px 10px 5px rgb(84, 85, 85);
+}
+
 #paragraph {
     font-size: 18px;
     font-weight: 600;
