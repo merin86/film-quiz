@@ -188,6 +188,105 @@ let questions = [
             {text: "Sagan om Karl-Bertil Jonssons julafton", correct: false},
             {text: "Fanny och Alexander", correct: true},
         ]
+    },
+    {
+        question: "What is the name of the Irish film that deals with 'the Guildford Four', four people falsely convicted of killing four off-duty British soldiers and a civilian?",
+        answers: [
+            {text: "In the Name of the Father", correct: true},
+            {text: "Papillon", correct: false},
+            {text: "The Shawshank Redemption", correct: false},
+            {text: "Midnight Express", correct: false},
+        ]
+    },
+    {
+        question: "What film is about a wealthy newspaperman who smears everyone around him? The film is often considered one of the most influential works in film history.",
+        answers: [
+            {text: "Citizen Ruth", correct: false},
+            {text: "Citizen Kane", correct: true},
+            {text: "Casablanca", correct: false},
+            {text: "The People vs. Larry Flynt", correct: false},
+        ]
+    },
+    {
+        question: "Which of the following 'westerns' does not star Clint Eastwood?",
+        answers: [
+            {text: "A Fistful of Dollars", correct: false},
+            {text: "The Good, the Bad and the Ugly", correct: false},
+            {text: "Once Upon a Time in the West", correct: true},
+            {text: "For a Few Dollars More", correct: false},
+        ]
+    },
+    {
+        question: "Which film is considered to be Scorsese's first critical and commercial success?",
+        answers: [
+            {text: "Taxi Driver", correct: false},
+            {text: "King of Comedy", correct: false},
+            {text: "Raging Bull", correct: false},
+            {text: "Mean Streets", correct: true},
+        ]
+    },
+    {
+        question: "Who has directed the most films among the following people (not counting post mortem releases)?",
+        answers: [
+            {text: "Woody Allen", correct: true},
+            {text: "Stanley Kubrick", correct: false},
+            {text: "Francis Ford Coppola", correct: false},
+            {text: "Orson Welles", correct: false},
+        ]
+    },
+    {
+        question: "Which of the following films is not directed by Steven Spielberg?",
+        answers: [
+            {text: "Jaws", correct: false},
+            {text: "Alien", correct: true},
+            {text: "E.T. the Extra-Terrestrial", correct: false},
+            {text: "Empire of the Sun", correct: false},
+        ]
+    },
+    {
+        question: "Which of the following films does not star James Stewart?",
+        answers: [
+            {text: "Mr. Smith Goes to Washington", correct: false},
+            {text: "It's a Wonderful Life", correct: false},
+            {text: "Gone with the Wind", correct: true},
+            {text: "Vertigo", correct: false},
+        ]
+    },
+    {
+        question: "A Swedish director was nominated for two oscars in 2023 for the film 'Triangle of Sadness'. What is the director's name?",
+        answers: [
+            {text: "Anna Odell", correct: false},
+            {text: "Roy Andersson", correct: false},
+            {text: "Lukas Moodysson", correct: false},
+            {text: "Ruben Östlund", correct: true},
+        ]
+    },
+    {
+        question: "Which of the following films is not based on a book by Agatha Christie?",
+        answers: [
+            {text: "The French Connection", correct: true},
+            {text: "Murder on the Orient Express", correct: false},
+            {text: "Death on the Nile", correct: false},
+            {text: "Evil Under the Sun", correct: false},
+        ]
+    },
+    {
+        question: "Which film does not portray famous musicians?",
+        answers: [
+            {text: "Amadeus", correct: false},
+            {text: "The Hurricane", correct: true},
+            {text: "I'm Not There", correct: false},
+            {text: "Ray", correct: false},
+        ]
+    },
+    {
+        question: "Which movie did Nicole Kidman win an Oscar for?",
+        answers: [
+            {text: "Eyes Wide Shut", correct: false},
+            {text: "Moulin Rouge!", correct: false},
+            {text: "The Hours", correct: true},
+            {text: "Dogville", correct: false},
+        ]
     }
 
 ];
