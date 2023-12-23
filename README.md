@@ -58,6 +58,7 @@ The users of this website get to learn some film facts in an entertaining way. T
 
 -   I tested playing this game in different browsers: Chrome, FIrefox, Mi, Safari.
 -   I confirmed that the game results are always correct.
+-   The website is responsive.
 
 ### Validator Testing
 
