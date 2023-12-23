@@ -192,6 +192,7 @@ let questions = [
 
 ];
 
+/*jshint esversion: 6 */
 const playButton = document.getElementById("play-btn");
 const questionCounter = document.getElementById("question-counter");
 const currentQuestionElement = document.getElementById("current-question");
@@ -204,19 +205,19 @@ const paragraph = document.getElementById("paragraph");
 const max_questions = 5;
 
 let currentQuestionIndex = 0;
-let randomQuestions
+let randomQuestions;
 let score = 0;
 let currentQuestionCounter = 0;
 
-playButton.addEventListener("click", runQuiz)
+playButton.addEventListener("click", runQuiz);
 
 // Starts the game
 function runQuiz() {
-    playButton.classList.add("hide")
-    paragraph.classList.add("hide")
-    quizArea.classList.remove("hide")
-    questionCounter.classList.remove("hide")
-    returnButton.classList.remove("hide")
+    playButton.classList.add("hide");
+    paragraph.classList.add("hide");
+    quizArea.classList.remove("hide");
+    questionCounter.classList.remove("hide");
+    returnButton.classList.remove("hide");
     randomQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     score = 0;
@@ -241,7 +242,7 @@ function setQuestion() {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", chooseAnswer);
-    })
+    });
 }
 
 // Increments question counter and resets counter when user wants to play again
@@ -249,7 +250,7 @@ function counterTool() {
     if (currentQuestionCounter < max_questions) {
         currentQuestionCounter++;
         currentQuestionElement.innerText = currentQuestionCounter + "/" + max_questions;
-    } else (currentQuestionCounter === max_questions)
+    } else (currentQuestionCounter === max_questions);
         currentQuestionElement.innerText = currentQuestionIndex + 1 + "/" + max_questions;
 }
 
@@ -311,4 +312,4 @@ function returnStart() {
     window.location.reload();
 }
 
-returnButton.addEventListener("click", returnStart)
+returnButton.addEventListener("click", returnStart);
